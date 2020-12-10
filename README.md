@@ -13,11 +13,13 @@ After collecting and reading the data, I have treated the missing values. As the
 ## Normalize the data.
 To apply DBSCAN algorithm, we need to normalize our data, so that all the records have same range, that is 0-1. Also, by normalizing the data, we make the dataset uniteless.  And hence, we would be able to apply minimum distance while implementing the DBSCAN algorithm. The formula for normalization is as follows: 
 
-![alt text](https://github.com/NikhilSalv/SNS-Data-Analysis-with-K-Means-Clustering/blob/main/SNS%20Elbowplot.png) 
+![alt text](https://github.com/NikhilSalv/DBSCAN-clustering-on-SNS-data/blob/main/Normalization-Formula.jpg) 
 
 ## Hyperparameter Optimizing.
 
-After data munging part, we come to Hyperparameter optimizing part. Here, we try different values of eps (Minimum distance)
+After data munging part, we come to Hyperparameter optimizing part. Here, we try different values of eps (Minimum distance) and Minimum points. 
+As we increase the minimum distance between two data points, the noise decreases, and as we increase the minimum points of a cluster, the noise increases. 
+We choose the valaues of eps (minimum distance) and minimum points to be 0.5 and 5 respectively.  
 
 # Running the model on the dataset.
-After predicting the value of K, we run the K-Means Clustering algorithm on the SNS dataset. The output denotes the 5 clusters. The output column is row-wise combined with the original dataset. And we can see that which record belongs to which cluster. 
+After predicting the value of eps and minimum points, we run the DBSCAN Clustering algorithm on the SNS dataset. The output denotes the 2 clusters. The output column is row-wise combined with the original dataset. And we can see that which record belongs to which cluster. 
